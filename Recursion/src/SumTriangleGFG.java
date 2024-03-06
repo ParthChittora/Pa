@@ -10,20 +10,20 @@ public class SumTriangleGFG {
 //            [8, 12, 16]
 //            [3, 5, 7, 9]
 //            [1, 2, 3, 4, 5]
-public static void sum(int[]arr , int size){
+public static void sum(int[]arr){
     if(arr.length<1){
         return;
     }
-    int[] ans = new int[size-1];
+    int[] ans = new int[arr.length-1];
     for (int i = 0; i < arr.length-1; i++) {
         ans[i]=arr[i]+arr[i+1];
     }
-    sum(ans,size-1);
+    sum(ans);
     System.out.println(Arrays.toString(arr));
 }
 
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4, 5};
-        sum(a,a.length);
+        sum(a);
     }
 }
